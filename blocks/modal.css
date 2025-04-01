@@ -84,6 +84,10 @@
   margin-top: 54px;
 }
 
+.modal__input_type_error {
+  border-color: #ff0000;
+}
+
 .modal__button {
   background-color: #000;
   color: #fff;
@@ -98,6 +102,25 @@
   text-align: center;
   cursor: pointer;
   margin-top: 48px;
+  transition: opacity 0.3s ease;
+}
+
+.modal__button:hover {
+  opacity: 0.8;
+}
+
+.modal__button_disabled {
+  color: #fff;
+}
+
+.modal__error_visible {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #ff0000;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .modal__image {
