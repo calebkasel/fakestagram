@@ -65,6 +65,7 @@
             maxlength="40"
             required
           />
+          <span class="modal__error" id="edit-profile-title-error"></span>
           <input
             type="text"
             name="description"
@@ -75,6 +76,7 @@
             maxlength="200"
             required
           />
+          <span class="modal__error" id="edit-profile-description-error"></span>
           <button class="modal__button">Save</button>
         </form>
       </div>
@@ -95,17 +97,17 @@
             maxlength="30"
             required
           />
-          <span></span>
+          <span class="modal__error" id="add-card-title-error"></span>
           <input
             type="url"
             name="Image Url"
             class="modal__input"
-            id="add-card-image"
+            id="add-card-url"
             placeholder="Image URL"
             required
           />
-          <span class="modal__error_visible">hello</span>
-          <button class="modal__button modal__button_disabled">Save</button>
+          <span class="modal__error" id="add-card-url-error"></span>
+          <button class="modal__button">Save</button>
         </form>
       </div>
     </div>
@@ -133,5 +135,6 @@
     </template>
 
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validate.js" defer></script>
   </body>
 </html>

@@ -56,15 +56,32 @@ const cardList = document.querySelector("#cards-list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
+  function handleClickEscape(evt) {
+    if (evt.target === evt.currentTarget) {
+      closeModal(evt.target);
+    }
+  }
+
+  function handleEscapeKey(evt) {
+    if (evt.key === "Escape") {
+      const activeModal = document.querySelector(".modal_opened");
+      closeModal(activeModal);
+    }
+  }
+
 function openModal(modal) {
   if (modal == profileEditModal) {
     fillEditModalForm();
   }
   modal.classList.add("modal_opened");
+  modal.addEventListener("click", handleClickEscape);
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("click", handleClickEscape);
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 function fillEditModalForm() {

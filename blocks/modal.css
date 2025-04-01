@@ -85,7 +85,7 @@
 }
 
 .modal__input_type_error {
-  border-color: #ff0000;
+  border-bottom-color: #ff0000;
 }
 
 .modal__button {
@@ -110,10 +110,13 @@
 }
 
 .modal__button_disabled {
-  color: #fff;
+  background: #fff;
+  color: #000;
+  border: 1px #000 solid;
+  opacity: 0.2;
 }
 
-.modal__error_visible {
+.modal__error {
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -121,6 +124,13 @@
   color: #ff0000;
   margin: 0;
   margin-top: 5px;
+  align-self: flex-start;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal__error_visible {
+  opacity: 1;
 }
 
 .modal__image {
