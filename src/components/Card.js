@@ -7,7 +7,7 @@ class Card {
   }
 
   _getTemplate() {
-    return this._cardSelector.cloneNode(true);
+    return document.querySelector(this._cardSelector).content.firstElementChild.cloneNode(true);
   }
 
   _handleDeleteCard() {
