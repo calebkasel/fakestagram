@@ -4,6 +4,7 @@ import ModalWithForm from "../components/ModalWithForm.js";
 import ModalWithImage from "../components/ModalWithImage.js";
 import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
+import Api from "../components/Api.js";
 import "../pages/index.css";
 import {
   initialCards,
@@ -87,3 +88,15 @@ addCardButton.addEventListener("click", () => {
   addCardValidator.resetForm();
   newCardModal.open();
 });
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "d80739d0-706b-4b94-8e8d-9efce9e4b748",
+    "Content-Type": "application/json",
+  }
+});
+
+const cards = api.getInitialCards();
+
+
