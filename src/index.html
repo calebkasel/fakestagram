@@ -82,11 +82,38 @@
       </div>
     </div>
 
+    <div class="modal" id="edit-profile-pic-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close-button"
+          id="edit-profile-pic-modal-close-button"
+        ></button>
+        <h2 class="modal__heading">Change profile picture</h2>
+        <form class="modal__form" name="edit-profile-pic-form" id="modal-form">
+          <input
+            type="url"
+            name="profile-pic-url"
+            class="modal__input"
+            id="edit-profile-pic-url"
+            placeholder="Profile picture"
+            required
+          />
+          <span class="modal__error" id="edit-profile-pic-error"></span>
+          <button class="modal__button">Save</button>
+        </form>
+      </div>
+    </div>
+
     <div class="modal" id="add-card-modal">
       <div class="modal__container">
         <button class="modal__close-button" id="add-card-close-button"></button>
         <h2 class="modal__heading">New Place</h2>
-        <form class="modal__form" name="add-card-form" id="modal-form" novalidate>
+        <form
+          class="modal__form"
+          name="add-card-form"
+          id="modal-form"
+          novalidate
+        >
           <input
             type="text"
             name="name"
@@ -120,6 +147,19 @@
         ></button>
         <img src="#" alt="#" class="modal__image" id="modal-image" />
         <h3 class="modal__image-title" id="image-modal-title"></h3>
+      </div>
+    </div>
+
+    <div class="modal" id="delete-modal">
+      <div class="modal__container-image">
+        <button
+          class="modal__close-button"
+          id="delete-modal-close-button"
+        ></button>
+        <h2 class="modal__heading">Are you sure?</h2>
+        <form class="modal__form" name="delete-form" id="modal-form">
+          <button class="modal__button">Yes</button>
+        </form>
       </div>
     </div>
 

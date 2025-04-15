@@ -24,6 +24,7 @@ const profileDescriptionInput = profileEditModal.querySelector(
 
 const editModalForm = document.forms["edit-profile-form"];
 const addCardModalForm = document.forms["add-card-form"];
+const editProfilePicForm = document.forms["edit-profile-pic-form"];
 
 const editFormValidator = new FormValidator(validationOptions, editModalForm);
 const addCardValidator = new FormValidator(validationOptions, addCardModalForm);
@@ -67,6 +68,10 @@ const newCardModal = new ModalWithForm({
     newCardModal.close();
   },
 });
+
+const deleteCardModal = new ModalWithForm({
+  
+})
 
 imageModal.setEventListeners();
 userInfoModal.setEventListeners();

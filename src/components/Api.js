@@ -14,5 +14,13 @@ export default class Api {
     .then((res) => {
       console.log(res)
     });
+
+    addCard(data) {
+      fetch(`${this._baseUrl}/cards`, {
+        method: "POST",
+        headers: this._headers,
+
+      })
+    }
   }
 }
