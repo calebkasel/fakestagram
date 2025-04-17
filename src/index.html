@@ -24,6 +24,7 @@
           <img
             src="<%=require('./images/jacques-cousteau.png')%>"
             alt="Avatar"
+            id="profile-avatar"
             class="profile__image"
           />
           <div class="profile__info">
@@ -151,13 +152,13 @@
     </div>
 
     <div class="modal" id="delete-modal">
-      <div class="modal__container-image">
-        <button
-          class="modal__close-button"
-          id="delete-modal-close-button"
-        ></button>
-        <h2 class="modal__heading">Are you sure?</h2>
-        <form class="modal__form" name="delete-form" id="modal-form">
+      <div class="modal__container">
+        <form class="modal__form" name="delete-form" id="modal-form"></form>
+          <button
+            class="modal__close-button"
+            id="delete-modal-close-button"
+          ></button>
+          <h2 class="modal__heading">Are you sure?</h2>
           <button class="modal__button">Yes</button>
         </form>
       </div>

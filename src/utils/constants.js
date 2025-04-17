@@ -35,6 +35,7 @@ export const selectors = {
   editProfilePicModal: "#edit-profile-pic-modal",
   profileTitle: "#profile-title",
   profileDescription: "#profile-description",
+  profileAvatar: "#profile-avatar",
   profileEditName: "#edit-profile-title",
   profileEditDescription: "#edit-profile-description",
   formModalContainer: ".modal__container",

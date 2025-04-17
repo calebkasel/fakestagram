@@ -1,18 +1,29 @@
 class Card {
-  constructor(data, cardSelector, handleImageClick) {
+  constructor({data, cardSelector, handleImageClick, handleDeleteCard}) {
     this._name = data.name;
     this._link = data.link;
+    this._id = data._id;
+
     this._cardSelector = cardSelector;
     this._handleImageClick = handleImageClick;
+    this._handleDeleteCard = handleDeleteCard;
   }
 
   _getTemplate() {
     return document.querySelector(this._cardSelector).content.firstElementChild.cloneNode(true);
   }
 
-  _handleDeleteCard() {
+  _handleDeleteCardClick() {
+    this._handleDeleteCard();
+  }
+
+  _deleteCard() {
     this._cardEl.remove();
     this._cardEl = null;
+  }
+
+  handleDeleteCard() {
+    this._deleteCard();
   }
 
   _handleCardLike() {
